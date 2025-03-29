@@ -4,71 +4,179 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ankit Mistry | Digital Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEJx3W6Jf5V2hAybqK3qzP1nht0gG28XdoERxOwMGQ8lUuvNfZ6ofz9Yw0k7p" crossorigin="anonymous">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+            padding-top: 50px;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-family: 'Open Sans', sans-serif;
+            color: #007bff;
+        }
+
+        .section-title {
+            margin-top: 30px;
+            color: #333;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .btn-custom {
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .btn-custom:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #007bff;
+            color: white;
+            margin-top: 50px;
+        }
+
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-title {
+            font-weight: 600;
+        }
+
+        .card-text {
+            color: #555;
+        }
+
+        .social-links a {
+            margin: 0 10px;
+            color: #007bff;
+            font-size: 1.2rem;
+        }
+
+        .social-links a:hover {
+            text-decoration: none;
+            color: #0056b3;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>Welcome to My Digital Portfolio</h1>
-            <p>Data Engineer | Cloud Enthusiast | Big Data Developer</p>
+        <header class="text-center">
+            <h1>Ankit Deepak Mistry</h1>
+            <p class="lead">Data Engineer | Cloud Enthusiast | Big Data Developer</p>
         </header>
 
-        <section id="bio">
-            <h2>About Me</h2>
-            <p>👋 Hi, I’m <strong>Ankit Deepak Mistry</strong>, a passionate Data Engineer with 5 years of experience in building scalable **ETL pipelines** using **Spark, Kafka, AWS, and SQL**.</p>
-            <p>I enjoy solving complex data challenges, automating workflows, and developing cloud-native solutions.</p>
-        </section>
-
+        <!-- Contact Section -->
         <section id="contact">
-            <h2>Contact Information</h2>
-            <ul>
-                <li>📍 Location: Ontario, Canada</li>
-                <li>📧 Email: <a href="mailto:ankitmistry9601@gmail.com">ankitmistry9601@gmail.com</a></li>
-                <li>📞 Phone: +1 (647) 393-9601</li>
-                <li>🔗 <a href="https://linkedin.com/in/your-profile" target="_blank">LinkedIn Profile</a></li>
-                <li>🔗 <a href="https://github.com/your-github-username" target="_blank">GitHub Profile</a></li>
-            </ul>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <h2 class="section-title">Contact Information</h2>
+                    <ul class="list-unstyled">
+                        <li>📍 <strong>Location:</strong> Ontario, Canada</li>
+                        <li>📧 <strong>Email:</strong> <a href="mailto:ankitmistry9601@gmail.com">ankitmistry9601@gmail.com</a></li>
+                        <li>📞 <strong>Phone:</strong> +1 (647) 393-9601</li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6 text-center">
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/your-profile" target="_blank"><i class="bi bi-linkedin"></i> LinkedIn</a>
+                        <a href="https://github.com/your-github-username" target="_blank"><i class="bi bi-github"></i> GitHub</a>
+                    </div>
+                </div>
+            </div>
         </section>
 
+        <!-- Resume Section -->
         <section id="resume">
-            <h2>Resume</h2>
-            <p>📄 Download my resume: <a href="resume.pdf" target="_blank">Click here</a></p>
+            <h2 class="section-title">Resume</h2>
+            <p>📄 Download my resume: <a href="resume.pdf" class="btn btn-custom">Click here</a></p>
         </section>
 
+        <!-- Work Samples Section -->
         <section id="work">
-            <h2>Work Samples & Projects</h2>
-            <p>Here are some of my featured projects:</p>
-            <ul>
-                <li>🚗 <strong>Motor Car Price Prediction:</strong> <a href="https://github.com/your-github-username/motor-car-price-prediction" target="_blank">GitHub Link</a></li>
-                <li>⚡ <strong>Streaming Data Pipeline with Kafka:</strong> <a href="https://github.com/your-github-username/kafka-streaming-pipeline" target="_blank">GitHub Link</a></li>
-                <li>☁️ <strong>AWS ETL Pipeline:</strong> <a href="https://github.com/your-github-username/aws-etl-pipeline" target="_blank">GitHub Link</a></li>
-            </ul>
-            <p>View more projects on my <a href="projects.html">Projects Page</a>.</p>
+            <h2 class="section-title">Work Samples & Projects</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Motor Car Price Prediction</h5>
+                            <p class="card-text">A predictive model to estimate the price of a used car based on various features.</p>
+                            <a href="https://github.com/your-github-username/motor-car-price-prediction" target="_blank" class="btn btn-custom">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Streaming Data Pipeline</h5>
+                            <p class="card-text">Building streaming pipelines using Kafka for real-time data processing.</p>
+                            <a href="https://github.com/your-github-username/kafka-streaming-pipeline" target="_blank" class="btn btn-custom">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">AWS ETL Pipeline</h5>
+                            <p class="card-text">Developed a scalable ETL pipeline on AWS using Step Functions and Lambda.</p>
+                            <a href="https://github.com/your-github-username/aws-etl-pipeline" target="_blank" class="btn btn-custom">View Project</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
+        <!-- Certificates Section -->
         <section id="certificates">
-            <h2>Certificates & Diplomas</h2>
-            <ul>
+            <h2 class="section-title">Certificates & Diplomas</h2>
+            <ul class="list-unstyled">
                 <li>📜 <strong>Cloud Computing Technologies</strong> (George Brown College, Expected 2025)</li>
                 <li>📜 <strong>Business Analytics</strong> (Seneca Polytechnic College, Jan 2024 - Aug 2024)</li>
                 <li>📜 <strong>Data Science Postgraduate Diploma</strong> (Manipal University, 2020 - 2021)</li>
             </ul>
         </section>
 
-        <section id="awards">
-            <h2>Academic Awards</h2>
-            <p>🏆 List any academic awards here (if applicable).</p>
-        </section>
-
+        <!-- Transcripts Section -->
         <section id="transcripts">
-            <h2>Transcripts & Letters of Recommendation</h2>
-            <p>📜 <a href="transcript.pdf" target="_blank">View My Transcript</a></p>
-            <p>📜 <a href="letter_of_recommendation.pdf" target="_blank">View Letter of Recommendation</a></p>
+            <h2 class="section-title">Transcripts & Letters of Recommendation</h2>
+            <p>📜 <a href="transcript.pdf" class="btn btn-custom">View My Transcript</a></p>
+            <p>📜 <a href="letter_of_recommendation.pdf" class="btn btn-custom">View Letter of Recommendation</a></p>
         </section>
 
+        <!-- Footer -->
         <footer>
             <p>© 2025 Ankit Deepak Mistry | Digital Portfolio</p>
         </footer>
     </div>
+
+    <!-- Bootstrap JS and Icons -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0UiwEXyAqB+nMw5PzG57k0a0E9rmC9twFqkP9El6PYgIhSkJ" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.js"></script>
 </body>
 </html>
